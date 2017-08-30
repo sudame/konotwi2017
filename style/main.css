@@ -56,9 +56,15 @@ div.main-content{
 
 main{
     margin: 20px 0 20px 20px;
-    padding: 5px;
+    padding: 15px 0 0 15px;
     flex: 3 1 70%;
-    border: 1px solid black;    
+    border: 1px solid black; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start; 
+    align-content: flex-start;
 }
 
 aside{
@@ -72,16 +78,90 @@ aside.left-aside{
     display: none;
 }
 
-main > div {
-    margin: 20px auto 0 auto;
-    max-width: 1000px;
+main > div.candidate-card{
+    border: 1px solid black;
+    margin: 0 15px 15px 0;
+    width: 45%;
+    min-width: 250px;
+    position: relative;
+}
+
+main > div.candidate-card > img.bannar{
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+main > div.candidate-card > img.profile{
+    object-fit: contain;
+    width: 70px;
+    border-radius: 500px;
+    position: relative;
+    top: -35px;
+    left: 10px;
+    border: 3px solid white;
+}
+
+main > div.candidate-card > div.footer{
     display: flex;
+}
+
+main > div.candidate-card > div.name {
+    position: relative;
+    top: -40px;
+    left: 12px;
+    margin-bottom: -30px;
+}
+
+main > div.candidate-card > div.name > div.display-name {
+    font-size: 20px;
+}
+
+main > div.candidate-card > div.name > div.screen-name {
+    font-size: 12px;
+}
+
+main > div.candidate-card > a.follow-button{
+    display: inline-block;
+    padding: 5px 15px 5px 15px;
+    color: white;
+    text-decoration: none;
+    background-color: #1DA1F3;
+    font-weight: bold;
+    z-index: 100;
+    position: relative;
+    top: -80px;
+    left: calc(100% - 90px);
     
 }
 
-main >div > div{
+main > div.candidate-card > div.description{
+    position: relative;
+    top: -35px;
+    margin-bottom: -30px;
+    padding: 5px;
+}
+
+main > div.candidate-card > div.footer > div{
+    flex: 1 1 100%;
+    text-align: center;
     border: 1px solid black;
-    
+    border-left: none;
+}
+
+main > div.candidate-card > div > div:last-child{
+    border-right: none;
+}
+
+main > div.candidate-card > div.vote-button-wrapper{
+    padding: 10px;
+}
+
+main > div.candidate-card > div.vote-button-wrapper > div.vote-button{
+    padding: 15px;
+    text-align: center;
+    background-color: #F44336;
 }
 
 @media(min-width: 1200px){
@@ -106,4 +186,13 @@ main >div > div{
     div.main-content{
         flex-flow: column;
     }
+
+    main > div.candidate-card{
+        width: 100%;
+    }
+
+    main > div.candidate-card > img.bannar{
+        width: 100%;
+    }
+
 }
