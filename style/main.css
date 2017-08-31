@@ -91,11 +91,13 @@ main > div.candidate-card > img.bannar{
     width: 100%;
     height: auto;
     display: block;
+    border-bottom: 1px solid black;
 }
 
 main > div.candidate-card > img.profile{
-    object-fit: contain;
+    object-fit: cover;
     width: 70px;
+    height: 70px;
     border-radius: 500px;
     position: relative;
     top: -35px;
@@ -162,6 +164,7 @@ main > div.candidate-card > div.vote-button-wrapper > div.vote-button{
     padding: 15px;
     text-align: center;
     background-color: #F44336;
+    cursor: pointer;
 }
 
 @media(min-width: 1200px){
